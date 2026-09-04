@@ -1,0 +1,154 @@
+/* Responsive hardening for the exported WordPress/Elementor site. */
+:root {
+  --responsive-gutter: clamp(16px, 3.5vw, 32px);
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe,
+embed,
+object {
+  max-width: 100%;
+}
+
+.entry-content,
+.elementor-widget-container,
+.ct-widget,
+.wp-block-group,
+.wp-block-column {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.wp-block-table,
+.entry-content table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.wp-block-image img,
+.elementor-widget-image img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+@media (max-width: 1024px) {
+  .ct-container,
+  .ct-container-fluid,
+  .elementor-section.elementor-section-boxed > .elementor-container,
+  .e-con-inner {
+    max-width: 100%;
+  }
+
+  .ct-container,
+  .ct-container-fluid {
+    padding-inline: var(--responsive-gutter);
+  }
+
+  .elementor-column,
+  .elementor-widget-wrap,
+  .elementor-widget-container {
+    min-width: 0;
+  }
+
+  .entry-content h1,
+  .page-title,
+  .elementor-widget-heading h1.elementor-heading-title {
+    font-size: clamp(2rem, 7vw, 3.25rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .entry-content h2,
+  .elementor-widget-heading h2.elementor-heading-title {
+    font-size: clamp(1.55rem, 5vw, 2.35rem) !important;
+    line-height: 1.18 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --responsive-gutter: 16px;
+  }
+
+  .site-main,
+  .entry-content,
+  .ct-container-full,
+  .elementor,
+  .elementor-section,
+  .elementor-container,
+  .elementor-row {
+    max-width: 100%;
+  }
+
+  .elementor-row {
+    flex-wrap: wrap;
+  }
+
+  .elementor-section:not(.elementor-section-full_width) > .elementor-container {
+    padding-inline: var(--responsive-gutter);
+  }
+
+  .elementor-button,
+  .wp-element-button,
+  input[type="submit"] {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .entry-content ul,
+  .entry-content ol {
+    padding-inline-start: 1.35rem;
+  }
+
+  .wp-block-columns:not(.is-not-stacked-on-mobile) {
+    gap: 1.25rem;
+  }
+
+  .ct-footer [data-column],
+  .ct-footer .ct-widget {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .ct-container,
+  .ct-container-fluid,
+  .elementor-section:not(.elementor-section-full_width) > .elementor-container {
+    padding-inline: 12px;
+  }
+
+  .entry-content h1,
+  .page-title,
+  .elementor-widget-heading h1.elementor-heading-title {
+    font-size: clamp(1.75rem, 9vw, 2.4rem) !important;
+  }
+
+  .entry-content h2,
+  .elementor-widget-heading h2.elementor-heading-title {
+    font-size: clamp(1.35rem, 7vw, 1.9rem) !important;
+  }
+}

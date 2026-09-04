@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://ms-textile-solution-bangladesh.com/sitemap.xml
+Sitemap: https://ms-textile-solution-bangladesh.com/sitemap.rss

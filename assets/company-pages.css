@@ -1,0 +1,65 @@
+/* About and Contact page layouts. */
+.ts-page-container{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+.ts-eyebrow{font-size:12px;font-weight:700;letter-spacing:.15em;color:#087f83;margin:0 0 14px}
+.ts-contact-hero{background:linear-gradient(115deg,#102b40,#185363);padding:72px 0;color:#d2e1e8}
+.ts-contact-hero h1{color:#fff;font-size:clamp(38px,5vw,64px);line-height:1.08;max-width:850px;margin:0 0 24px}
+.ts-contact-hero .ts-eyebrow{color:#86e0d7}
+.ts-contact-hero p:not(.ts-eyebrow){font-size:18px;max-width:700px;margin-bottom:26px}
+.ts-contact-call{display:inline-flex;align-items:center;gap:28px;background:#86e0d7;border-radius:8px;padding:13px 22px;color:#102b40!important;font-weight:700;text-decoration:none}
+.ts-contact-call:hover{background:#aff2eb}
+.ts-contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:72px;padding-block:72px;align-items:start}
+.ts-contact-layout h2,.ts-office-map h2{font-size:clamp(26px,3vw,36px);margin:0 0 18px}
+.ts-contact-details>p:not(.ts-eyebrow){max-width:410px}
+.ts-contact-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid #dce6ec}
+.ts-detail-number{flex-shrink:0;display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:#e1f0ef;color:#087f83;font-size:12px;font-weight:700}
+.ts-contact-item h3{font-size:16px;margin:0 0 6px;letter-spacing:0}
+.ts-contact-item p{margin:0;font-size:15px}
+.ts-contact-item a{font-size:15px;overflow-wrap:anywhere;color:#12696e}
+.ts-enquiry-card{padding:36px;background:white;border:1px solid #dce6ec;border-radius:18px;box-shadow:0 16px 45px #102b4008}
+.ts-enquiry-card>p{font-size:14px;margin-bottom:24px}
+body .ts-enquiry-card .wpforms-container{padding:0;margin:0;border:0;box-shadow:none;border-radius:0}
+.ts-enquiry-card .wpforms-field-container{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+body .ts-enquiry-card .wpforms-field{padding:0;margin:0;min-width:0;float:none;width:auto}
+.ts-enquiry-card .wpforms-field-text,.ts-enquiry-card .wpforms-field-textarea{grid-column:1/-1}
+body .ts-enquiry-card .wpforms-field-label{font-size:14px;font-weight:600}
+body .ts-enquiry-card :is(input,textarea){width:100%;max-width:100%;font:inherit}
+body .ts-enquiry-card textarea{min-height:160px;resize:vertical}
+.ts-enquiry-card .wpforms-submit-container{padding:24px 0 0}
+body .ts-enquiry-card button[type=submit]{width:100%;font-size:15px}
+.ts-enquiry-card .ts-form-note{font-size:12px;line-height:1.65}
+.ts-office-map{padding-bottom:72px}
+.ts-office-map iframe{display:block;width:100%;height:360px;border:1px solid #dce6ec!important;border-radius:18px;margin-top:28px;background:#e4edef}
+/* Keep existing About content, with consistent section and card treatments. */
+body .elementor-215>.elementor-top-section{padding:40px 24px;margin:0;background:#f5f8fa}
+body .elementor-215>.elementor-top-section>.elementor-container{max-width:1200px;gap:24px}
+body .elementor-215>.elementor-top-section>.elementor-container>.elementor-column{min-width:0;flex:1}
+body .elementor-215 .elementor-widget-wrap{padding:0!important;align-content:start}
+body .elementor-215 .elementor-widget-spacer{display:none}
+body .elementor-215 .elementor-element-25b7d045{background:linear-gradient(115deg,#102b40,#185363)!important;padding:72px 24px!important}
+body .elementor-215 .elementor-element-25b7d045>.elementor-background-overlay{display:none}
+body .elementor-215 .elementor-element-25b7d045>.elementor-container{gap:64px;align-items:center}
+body .elementor-215 .elementor-element-25b7d045 h1{font-size:clamp(36px,4.5vw,58px);color:#fff;line-height:1.1;margin:0}
+body .elementor-215 .elementor-element-25b7d045 p{color:#d2e1e8;font-size:16px}
+body .elementor-215 .elementor-element-1f1a7d8f p{color:#86e0d7!important;text-transform:uppercase;letter-spacing:.15em;font-size:12px}
+body .elementor-215 .elementor-element-459a500f>.elementor-widget-wrap{padding:30px!important;border:1px solid #ffffff26;border-radius:16px;background:#ffffff08}
+body .elementor-215 .ts-story-label{font-size:22px!important;font-weight:700;color:#86e0d7!important;line-height:1.4}
+body .elementor-215 .elementor-element-b212a6b{padding-block:28px!important;background:#e7f1f3;border-bottom:1px solid #dce6ec}
+body .elementor-215 .elementor-element-b212a6b h2{font-size:22px}
+body .elementor-215 .elementor-element-b212a6b a{display:inline-block;padding:9px 16px;margin:5px 8px 5px 0;background:#fff;border:1px solid #cbdde3;border-radius:8px;font-weight:600;font-size:14px}
+body .elementor-215 .elementor-widget-image-box{overflow:hidden;border:1px solid #dce6ec;border-radius:14px;background:#fff}
+body .elementor-215 .elementor-image-box-img{display:block!important;width:100%!important;margin:0!important}
+body .elementor-215 .elementor-image-box-img img{width:100%;height:auto;aspect-ratio:300/330;object-fit:cover;object-position:top;display:block}
+body .elementor-215 .elementor-image-box-content{padding:20px 12px;text-align:center}
+body .elementor-215 .elementor-image-box-title{font-size:17px;line-height:1.4;margin:0 0 6px;letter-spacing:-.02em}
+body .elementor-215 .elementor-image-box-description{font-size:13px;line-height:1.5;margin:0;color:#566b7b}
+body .elementor-215 :is(.elementor-element-5339f08b,.elementor-element-4700119){padding-bottom:16px}
+body .elementor-215 :is(.elementor-element-dd981ca,.elementor-element-2f22aa5){padding-block:12px}
+body .elementor-215 :is(.elementor-element-813556f,.elementor-element-0f42e93,.elementor-element-cb2a733,.elementor-element-1a1d389)>.elementor-container>.elementor-column>.elementor-widget-wrap{padding:28px!important;background:#fff;border:1px solid #dce6ec;border-radius:14px}
+body .elementor-215 :is(.elementor-element-813556f,.elementor-element-0f42e93,.elementor-element-cb2a733,.elementor-element-1a1d389){padding-block:12px}
+body .elementor-215 .elementor-element-1f8dd31>.elementor-container{gap:24px}
+body .elementor-215 .elementor-element-1f8dd31 .elementor-widget-wrap{padding:24px!important;border:1px solid #dce6ec;border-radius:14px;background:#fff}
+body .elementor-215 .elementor-element-73c9f188{background:#102b40!important;text-align:center;padding:56px 24px}
+body .elementor-215 .elementor-element-73c9f188>.elementor-container{max-width:850px}
+body .elementor-215 .elementor-element-73c9f188 :is(h2,p){color:#fff!important}
+@media(max-width:900px){.ts-contact-layout{gap:32px}.ts-enquiry-card{padding:26px}.ts-enquiry-card .wpforms-field-container{grid-template-columns:1fr}body .elementor-215 .elementor-element-25b7d045>.elementor-container{gap:30px}}
+@media(max-width:767px){.ts-page-container{width:calc(100% - 32px)}.ts-contact-hero{padding:44px 0}.ts-contact-hero p:not(.ts-eyebrow){font-size:16px}.ts-contact-layout{grid-template-columns:1fr;padding-block:40px;gap:32px}.ts-contact-details h2 br,.ts-desktop-break{display:none}.ts-enquiry-card{padding:24px 20px}.ts-office-map{padding-bottom:40px}.ts-office-map iframe{height:280px}body .elementor-215>.elementor-top-section{padding:28px 16px}body .elementor-215>.elementor-top-section>.elementor-container{flex-wrap:wrap;gap:18px}body .elementor-215>.elementor-top-section>.elementor-container>.elementor-column{flex:0 0 100%;width:100%!important}body .elementor-215 .elementor-element-25b7d045{padding:44px 16px!important}body .elementor-215 :is(.elementor-element-dd981ca,.elementor-element-2f22aa5)>.elementor-container>.elementor-column{flex:0 0 calc(50% - 9px);width:calc(50% - 9px)!important}body .elementor-215 .elementor-image-box-title{font-size:15px}body .elementor-215 .elementor-image-box-content{padding:16px 10px}body .elementor-215 .elementor-element-459a500f>.elementor-widget-wrap{padding:24px!important}}
