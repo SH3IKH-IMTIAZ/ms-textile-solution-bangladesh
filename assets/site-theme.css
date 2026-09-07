@@ -118,3 +118,5 @@ body .ts-production-cta__button:hover{background:#aff2eb;color:#102b40!important
 .ts-production-cta__action p{margin:14px 0 0;color:#bdcfd8;font-size:13px;line-height:1.65;text-align:center}
 @media(max-width:900px){.ts-production-cta__inner{grid-template-columns:1fr;gap:30px;padding:40px}.ts-production-cta__action{border-left:0;padding-left:0;max-width:300px}.ts-production-cta__action p{text-align:left}}
 @media(max-width:480px){body .elementor-778 .ts-production-cta{padding:0 16px;margin:16px auto 24px}.ts-production-cta__inner{padding:32px 24px;border-radius:14px;gap:28px}.ts-production-cta__benefits{flex-direction:column;gap:10px;margin-top:22px}.ts-production-cta__action{max-width:none}.ts-production-cta__action p{text-align:center}}
+
+.ts-static-product-image img{display:block;width:100%;height:auto;border-radius:12px}
