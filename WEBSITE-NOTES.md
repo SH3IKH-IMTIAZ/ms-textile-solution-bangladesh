@@ -4,6 +4,10 @@ The 21 static pages use assets/site-theme.css and assets/site.js. About and Cont
 
 Navigation and search run locally. The contact form validates its fields and opens an email draft; it does not send through a backend.
 
+The shared script also controls the product FAQs and keyboard interaction. Legacy Blocksy, Elementor, and WPForms runtimes are no longer loaded: their dynamic chunks and WordPress endpoints are not part of this export. Keep the local handlers when changing those widgets. The mobile header is used through 1100px to avoid a logo/menu collision on tablets.
+
+The blog archive includes all 10 exported articles without server pagination. Run `python3 scripts/check-site.py` to check links, anchors, markup, search coverage, and article coverage.
+
 Asset cleanup: removed 42 query-bearing filenames, preserved existing clean versions, created clean filenames where necessary, and updated encoded references. Missing CSS backgrounds now use local imagery or a CSS pattern. Star ratings use Unicode stars instead of an absent icon font.
 
 YouTube widgets and embeds were removed; local product images were retained where available. Unavailable blog pagination links were removed. The favicons and primary logo were resized and optimized, and header image references use the optimized logo.

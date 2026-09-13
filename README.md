@@ -22,3 +22,14 @@ Open http://localhost:5500/ in your browser.
 - `wp-content/`: exported styles, scripts, and media
 
 The contact form opens an email draft in the visitor's email application; it does not send mail through a backend.
+
+## Validation
+
+Run the dependency-free static checks after editing pages:
+
+```sh
+python3 scripts/check-site.py
+node --check assets/site.js
+```
+
+The checks cover local links and assets, fragment IDs, page markup, search-index coverage, and the blog archive. Browser checks should also cover navigation, search, FAQs, and contact-form validation at mobile and desktop widths.

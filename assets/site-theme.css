@@ -29,6 +29,18 @@ body #header nav>ul>li>a{font-size:12px!important;letter-spacing:.035em!importan
 body #header .site-logo-container img{max-width:245px!important;max-height:68px!important}
 body #header .sub-menu{background:white;box-shadow:0 16px 45px #122b4320;border:1px solid var(--line);border-radius:12px}
 body #header .menu-item:focus-within>.sub-menu{opacity:1;visibility:visible;pointer-events:auto}
+/* The static export already contains the mega-menu links; no AJAX layout is needed. */
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.sub-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start;gap:16px;width:min(1200px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:calc(100vh - 136px);max-height:calc(100dvh - 136px);overflow:auto;margin-top:0;padding:20px;transform:none;min-height:0;background:#fff}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children:is(:hover,:focus-within,.ts-sub-open)>.sub-menu{opacity:1;visibility:visible;pointer-events:auto}
+body #header nav[data-id=menu]>.menu>.ts-sub-closed>.sub-menu{display:none!important}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>a>.ct-toggle-dropdown-desktop{display:none}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.ct-toggle-dropdown-desktop-ghost{pointer-events:auto;inset:auto;--toggle-button-size:32px;height:44px;margin:0 8px 0 -8px}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.ct-toggle-dropdown-desktop-ghost::before{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.sub-menu::after{display:none}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.sub-menu>li{display:flex;padding:0;border:0}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.sub-menu .sub-menu{display:block;box-shadow:none;border:0;border-radius:0;margin:8px 0 0}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.sub-menu .ct-menu-link{white-space:normal;overflow-wrap:anywhere;line-height:1.5;padding:8px}
+body #header nav[data-id=menu]>.menu>.menu-item-has-children>.sub-menu>li>.ct-menu-link{font-weight:700}
 body :is(.elementor-button,.ct-button,.wp-element-button,button[type=submit]){background:var(--teal)!important;color:#fff!important;border:1px solid var(--teal)!important;border-radius:8px!important;font-weight:600!important;box-shadow:0 5px 14px #087f8314;min-height:44px;padding:13px 23px;transition:background .2s,transform .2s}
 body :is(.elementor-button,.ct-button,.wp-element-button,button[type=submit]):hover{background:#12696e!important;color:#fff!important;transform:translateY(-2px)}
 body .elementor-top-section{padding-top:clamp(40px,5vw,76px);padding-bottom:clamp(40px,5vw,76px)}
@@ -79,13 +91,23 @@ body .ts-dark :is(.elementor-heading-title,.elementor-icon-box-title,p,.elemento
 .ts-search-results a{display:block;padding:12px;border-bottom:1px solid var(--line)}
 .ts-form-note{font-size:14px;margin-top:12px;color:var(--muted)}
 @media(max-width:999px){body .elementor-778 .elementor-element-cf113bd{width:100%!important}body .elementor-778 .elementor-element-eafe62f{padding:60px 20px!important;min-height:0}body #header .site-logo-container img{max-width:215px!important}}
+/* Keep the logo and navigation from colliding on landscape tablets. */
+@media(max-width:1100px){body #header>[data-device=desktop],body #offcanvas [data-device=desktop]{display:none}body #header>[data-device=mobile]{display:block;position:absolute;inset:0 0 auto}body #offcanvas [data-device=mobile]{display:flex}body #header .ct-header-trigger{--toggle-button-size:44px}}
 @media(max-width:767px){body .elementor-top-section{padding-block:36px}body .elementor-778 .elementor-element-eafe62f{padding:44px 10px!important}body .elementor-778 .elementor-element-d179204 ul{grid-template-columns:1fr;font-size:14px;gap:4px}body .elementor-778 .elementor-element-eafe62f h2{font-size:2.5rem!important}body .elementor-778 .elementor-element-dbcde29 .elementor-column{width:50%!important}body .elementor-button{font-size:13px!important;padding:13px 15px!important}body .ct-footer [data-row=middle]>div{padding-block:36px!important}body .entry-content{overflow-wrap:break-word}body .elementor-widget-spacer .elementor-spacer-inner{max-height:40px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
-body .ct-panel.ts-open{display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:fixed!important;inset:0!important;z-index:999999!important;background:#102b40b3!important}
+body .ct-panel.ts-open{display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:fixed!important;inset:0!important;z-index:100000000!important;background:#102b40b3!important}
 body .ct-panel.ts-open .ct-panel-inner{visibility:visible!important;opacity:1!important;transform:none!important;background:white!important;color:var(--ink)!important;max-height:100dvh;overflow:auto}
 body #offcanvas.ts-open .ct-panel-inner{width:min(90vw,420px);margin-left:auto}
-body #search-modal.ts-open .ct-panel-inner{width:100%;padding:clamp(20px,5vw,80px)}
+/* Search uses direct content/actions children, unlike the offcanvas drawer. */
+body #search-modal.ts-open{background:var(--paper)!important}
+body #search-modal>.ct-panel-actions{flex-shrink:0}
+body #search-modal>.ct-panel-content{align-items:center;justify-content:flex-start;gap:16px;padding:clamp(16px,4vw,48px);overflow:auto}
+body #search-modal .ct-search-form{flex-shrink:0;width:100%;max-width:750px}
+body #search-modal .ct-search-form-inner{margin-bottom:0}
+body #search-modal .ts-search-results{width:100%;max-width:750px;min-height:0;max-height:100%;margin:0 auto;border:1px solid var(--line)}
 body .ct-panel.ts-open :is(a,button){color:var(--ink)}
+body .ct-panel.ts-open .ct-toggle-close,body #offcanvas .ct-toggle-dropdown-mobile{--toggle-button-size:44px;--theme-icon-color:var(--ink)}
+body #offcanvas .ct-toggle-dropdown-mobile[aria-expanded=true]{--toggle-icon-transform:rotate(180deg)}
 body #offcanvas .ts-sub-open>.sub-menu{display:block!important;visibility:visible!important;opacity:1!important;height:auto!important}
 .ts-unavailable{display:block;font-size:12px;line-height:1.5;padding:8px;background:#edf4f7;color:#122b43;border-radius:6px;max-width:240px}
 body #header .ct-icon{fill:var(--ink)!important;color:var(--ink)!important}

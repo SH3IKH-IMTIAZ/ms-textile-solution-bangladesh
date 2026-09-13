@@ -461,43 +461,6 @@ nav[data-id=menu] > ul > li > a {
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/blocksy-child/*","/wp-content/themes/blocksy/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script>
-				const registerAllyAction = () => {
-					if ( ! window?.ElementorProFrontendConfig || ! window?.elementorFrontend?.utils?.urlActions ) {
-						return;
-					}
-
-					elementorFrontend.utils.urlActions.addAction( 'allyWidget:open', () => {
-						if (window?.ea11yWidget?.widget?.open) {
-							return window.ea11yWidget.widget.isOpen()
-								? window.ea11yWidget.widget.close()
-								: window.ea11yWidget.widget.open();
-						}
-					} );
-				};
-
-				const waitingLimit = 30;
-				let retryCounter = 0;
-
-				const waitForElementorPro = () => {
-					return new Promise( ( resolve ) => {
-						const intervalId = setInterval( () => {
-							if ( retryCounter === waitingLimit ) {
-								resolve( null );
-							}
-
-							retryCounter++;
-
-							if ( window.elementorFrontend && window?.elementorFrontend?.utils?.urlActions ) {
-								clearInterval( intervalId );
-								resolve( window.elementorFrontend );
-							}
-								}, 100 ); // Check every 100 milliseconds for availability of elementorFrontend
-					});
-				};
-
-				waitForElementorPro().then( () => { registerAllyAction(); });
-			</script>
 <!-- Click to Chat - https://holithemes.com/plugins/click-to-chat/  v4.43 -->
 <style id="ht-ctc-entry-animations">.ht_ctc_entry_animation{animation-duration:0.4s;animation-fill-mode:both;animation-delay:0s;animation-iteration-count:1;}			@keyframes ht_ctc_anim_corner {0% {opacity: 0;transform: scale(0);}100% {opacity: 1;transform: scale(1);}}.ht_ctc_an_entry_corner {animation-name: ht_ctc_anim_corner;animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);transform-origin: bottom var(--side, right);}
 			</style> <div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2 ht_ctc_entry_animation ht_ctc_an_entry_corner" id="ht-ctc-chat" style="display: none;  position: fixed; bottom: 15px; right: 15px;">
@@ -512,7 +475,7 @@ nav[data-id=menu] > ul > li > a {
 <stop offset="0" stop-color="#61fd7d"></stop>
 <stop offset="1" stop-color="#2bb826"></stop>
 </lineargradient>
-<use fill="url(#htwasqiconb-chat)" overflow="visible" style="fill: url(../index.html%3Fp=285.html)" xlink:href="#htwasqicona-chat"></use>
+<use fill="url(#htwasqiconb-chat)" overflow="visible" style="fill: url(#htwasqiconb-chat)" xlink:href="#htwasqicona-chat"></use>
 <g>
 <path d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z" fill="#FFF" style="fill: #FFFFFF;"></path>
 </g>
@@ -555,45 +518,5 @@ var ht_ctc_variables = {"g_an_event_name":"click to chat","gtm_event_name":"Clic
 //# sourceURL=ht_ctc_app_js-js-extra
 </script>
 <script data-wp-strategy="defer" defer="" id="ht_ctc_app_js-js" src="/wp-content/plugins/click-to-chat-for-whatsapp/new/inc/assets/js/app.js"></script>
-<script id="ct-scripts-js-extra">
-var ct_localizations = {"ajax_url":"/wp-admin/admin-ajax.php","public_url":"/wp-content/themes/blocksy/static/bundle/","rest_url":"/wp-json/","search_url":"/search/QUERY_STRING/","show_more_text":"Show more","more_text":"More","search_live_results":"Search results","search_live_no_results":"No results","search_live_results_closed":"Search results closed.","search_live_no_result":"No results","search_live_one_result":"You got %s result. Please press Tab to select it.","search_live_many_results":"You got %s results. Please press Tab to select one.","search_live_stock_status_texts":{"instock":"In stock","outofstock":"Out of stock"},"clipboard_copied":"Copied!","clipboard_failed":"Failed to Copy","expand_submenu":"Expand dropdown menu","collapse_submenu":"Collapse dropdown menu","dynamic_js_chunks":[{"id":"blocksy_pro_micro_popups","selector":".ct-popup","url":"/wp-content/plugins/blocksy-companion-pro/framework/premium/static/bundle/micro-popups.js?ver=2.1.53","version":"2.1.53"},{"id":"blocksy_mega_menu","selector":".menu .ct-ajax-pending","trigger":"slight-mousemove","url":"/wp-content/plugins/blocksy-companion-pro/framework/premium/extensions/mega-menu/static/bundle/main.js?ver=2.1.53","global_data":[{"var":"blocksyMegaMenu","data":{"persistence_key":"blocksy:mega-menu:201ba6"}}],"version":"2.1.53"},{"id":"blocksy_sticky_header","selector":"header [data-sticky]","url":"/wp-content/plugins/blocksy-companion-pro/static/bundle/sticky.js?ver=2.1.53","version":"2.1.53"}],"dynamic_styles":{"lazy_load":"/wp-content/themes/blocksy/static/bundle/non-critical-styles.min.css?ver=2.1.53","search_lazy":"/wp-content/themes/blocksy/static/bundle/non-critical-search-styles.min.css?ver=2.1.53","back_to_top":"/wp-content/themes/blocksy/static/bundle/back-to-top.min.css?ver=2.1.53"},"dynamic_styles_selectors":[{"selector":".ct-header-cart, #woo-cart-panel","url":"/wp-content/themes/blocksy/static/bundle/cart-header-element-lazy.min.css?ver=2.1.53"},{"selector":".flexy","url":"/wp-content/themes/blocksy/static/bundle/flexy.min.css?ver=2.1.53"},{"selector":".ct-pagination","url":"/wp-content/themes/blocksy/static/bundle/pagination.min.css?ver=2.1.53"},{"selector":".ct-popup","url":"/wp-content/plugins/blocksy-companion-pro/framework/premium/static/bundle/popups.min.css?ver=2.1.53"},{"selector":".ct-media-container[data-media-id], .ct-dynamic-media[data-media-id]","url":"/wp-content/plugins/blocksy-companion-pro/framework/premium/static/bundle/video-lazy.min.css?ver=2.1.53"},{"selector":"#account-modal","url":"/wp-content/plugins/blocksy-companion-pro/static/bundle/header-account-modal-lazy.min.css?ver=2.1.53"},{"selector":".ct-header-account","url":"/wp-content/plugins/blocksy-companion-pro/static/bundle/header-account-dropdown-lazy.min.css?ver=2.1.53"}],"login_generic_error_msg":"An unexpected error occurred. Please try again later."};
-//# sourceURL=ct-scripts-js-extra
-</script>
-<script id="ct-scripts-js" src="/wp-content/themes/blocksy/static/bundle/main.js"></script>
-<script id="elementor-webpack-runtime-js" src="/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"></script>
-<script id="elementor-frontend-modules-js" src="/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script>
-<script id="jquery-ui-core-js-before">
-jQuery.uiBackCompat = true;
-//# sourceURL=jquery-ui-core-js-before
-</script>
-<script id="jquery-ui-core-js" src="/wp-includes/js/jquery/ui/core.min.js"></script>
-<script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnX":"Share on X","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.2.3","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"e_panel_promotions":true,"e_pro_free_trial_popup":true,"nested-elements":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true},"urls":{"assets":"https:\/\/ms-textile-solution-bangladesh.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/ms-textile-solution-bangladesh.com\/wp-admin\/admin-ajax.php","uploadUrl":"http:\/\/ms-textile-solution-bangladesh.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"b1c313b42e","atomicFormsSendForm":"fbcf8a6180"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":285,"title":"Contact%20-%20Textile%20Solution%20Bangladesh","excerpt":"","featuredImage":false}};
-//# sourceURL=elementor-frontend-js-before
-</script>
-<script id="elementor-frontend-js" src="/wp-content/plugins/elementor/assets/js/frontend.min.js"></script>
-<script id="underscore-js" src="/wp-includes/js/underscore.min.js"></script>
-<script id="wp-util-js-extra">
-var _wpUtilSettings = {"ajax":{"url":"/wp-admin/admin-ajax.php"}};
-//# sourceURL=wp-util-js-extra
-</script>
-<script id="wp-util-js" src="/wp-includes/js/wp-util.min.js"></script>
-<script id="wpforms-js" src="/wp-content/plugins/wpforms-lite/assets/js/frontend/wpforms.min.js"></script>
-<script id="wpforms-elementor-js-extra">
-var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
-//# sourceURL=wpforms-elementor-js-extra
-</script>
-<script id="wpforms-elementor-js" src="/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js"></script>
-<script id="wpforms-validation-js" src="/wp-content/plugins/wpforms-lite/assets/lib/jquery.validate.min.js"></script>
-<script id="wpforms-mailcheck-js" src="/wp-content/plugins/wpforms-lite/assets/lib/mailcheck.min.js"></script>
-<script id="wpforms-punycode-js" src="/wp-content/plugins/wpforms-lite/assets/lib/punycode.min.js"></script>
-<script id="wpforms-generic-utils-js" src="/wp-content/plugins/wpforms-lite/assets/js/share/utils.min.js"></script>
-<script id="wpforms-modern-js" src="/wp-content/plugins/wpforms-lite/assets/js/frontend/wpforms-modern.min.js"></script>
-<script id="wpforms-address-field-js" src="/wp-content/plugins/wpforms-lite/assets/js/frontend/fields/address.min.js"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var wpforms_settings = {"val_required":"This field is required.","val_email":"Please enter a valid email address.","val_email_suggestion":"Did you mean {suggestion}?","val_email_suggestion_title":"Click to accept this suggestion.","val_email_restricted":"This email address is not allowed.","val_number":"Please enter a valid number.","val_number_positive":"Please enter a valid positive number.","val_minimum_price":"Amount entered is less than the required minimum.","val_confirm":"Field values do not match.","val_checklimit":"You have exceeded the number of allowed selections: {#}.","val_limit_characters":"{count} of {limit} max characters.","val_limit_words":"{count} of {limit} max words.","val_min":"Please enter a value greater than or equal to {0}.","val_max":"Please enter a value less than or equal to {0}.","val_recaptcha_fail_msg":"Google reCAPTCHA verification failed, please try again later.","val_turnstile_fail_msg":"Cloudflare Turnstile verification failed, please try again later.","val_inputmask_incomplete":"Please fill out the field in required format.","uuid_cookie":"","locale":"en","country":"","country_list_label":"Country list","wpforms_plugin_url":"https:\/\/ms-textile-solution-bangladesh.com\/wp-content\/plugins\/wpforms-lite\/","gdpr":"","ajaxurl":"https:\/\/ms-textile-solution-bangladesh.com\/wp-admin\/admin-ajax.php","mailcheck_enabled":"1","mailcheck_domains":[],"mailcheck_toplevel_domains":["dev"],"is_ssl":"1","nonce":"c9fa52cc5a","currency_code":"USD","currency_thousands":",","currency_decimals":"2","currency_decimal":".","currency_symbol":"$","currency_symbol_pos":"left","val_requiredpayment":"Payment is required.","val_creditcard":"Please enter a valid credit card number.","css_vars":["field-border-radius","field-border-style","field-border-size","field-background-color","field-border-color","field-text-color","field-menu-color","label-color","label-sublabel-color","label-error-color","button-border-radius","button-border-style","button-border-size","button-background-color","button-border-color","button-text-color","page-break-color","background-image","background-position","background-repeat","background-size","background-width","background-height","background-color","background-url","container-padding","container-border-style","container-border-width","container-border-color","container-border-radius","field-size-input-height","field-size-input-spacing","field-size-font-size","field-size-line-height","field-size-padding-h","field-size-checkbox-size","field-size-sublabel-spacing","field-size-icon-size","label-size-font-size","label-size-line-height","label-size-sublabel-font-size","label-size-sublabel-line-height","button-size-font-size","button-size-height","button-size-padding-h","button-size-margin-top","container-shadow-size-box-shadow"],"isModernMarkupEnabled":"1","formErrorMessagePrefix":"Form error message","errorMessagePrefix":"Error message","submitBtnDisabled":"Submit button is disabled during form submission.","readOnlyDisallowedFields":["captcha","map","content","divider","hidden","html","entry-preview","pagebreak","payment-total"],"error_updating_token":"Error updating token. Please try again or contact support if the issue persists.","network_error":"Network error or server is unreachable. Check your connection or try again later.","token_cache_lifetime":"86400","hn_data":[],"analytics_composite_field_types":["name","address","date-time","email","password","paypal-commerce"],"analytics_base64":"1","address_field":{"list_countries_without_states":["GB","DE","CH","NL"]}}
-/* ]]> */
-</script>
 </body>
 </html>
