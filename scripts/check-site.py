@@ -10,8 +10,8 @@ from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIGIN = "https://ms-textile-solution-bangladesh.com/"
-LOCAL_HOSTS = {urlsplit(ORIGIN).netloc, "www.ms-textile-solution-bangladesh.com"}
+ORIGIN = "https://www.textile-solution-bd.com/"
+LOCAL_HOSTS = {urlsplit(ORIGIN).netloc, "textile-solution-bd.com"}
 VOID = set("area base br col embed hr img input link meta param source track wbr".split())
 CSS_URL = re.compile(r"url\(\s*(?:\"([^\"]*)\"|'([^']*)'|([^)]*))\s*\)", re.I)
 

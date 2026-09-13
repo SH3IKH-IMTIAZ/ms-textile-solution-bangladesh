@@ -12,6 +12,6 @@ Asset cleanup: removed 42 query-bearing filenames, preserved existing clean vers
 
 YouTube widgets and embeds were removed; local product images were retained where available. Unavailable blog pagination links were removed. The favicons and primary logo were resized and optimized, and header image references use the optimized logo.
 
-All 21 pages include unique descriptions and canonical URLs on https://ms-textile-solution-bangladesh.com/. robots.txt no longer advertises absent sitemaps. Canonical URLs should be updated if the production domain changes.
+All 21 pages include unique descriptions and canonical URLs on https://www.textile-solution-bd.com/. Contact links and email drafts use info@textile-solution-bd.com. Article WhatsApp share links use the canonical URLs for this static export. robots.txt no longer advertises absent sitemaps.
 
 The current contact form behavior and unavailable trolley-wheel PDF remain separate limitations. Website files must be committed and pushed before a Git-based deployment can include them.

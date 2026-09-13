@@ -2,6 +2,9 @@
 
 Static website for M/s Textile Solution Bangladesh, including product information, About, and Contact pages.
 
+- Website: https://www.textile-solution-bd.com/
+- Contact email: info@textile-solution-bd.com
+
 ## Local preview
 
 Serve this directory as the web server root because asset URLs start with `/`:

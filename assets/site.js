@@ -238,8 +238,8 @@
     const value = id => form.querySelector('[id$="field_' + id + '"]')?.value.trim() || '';
     const subject = value(3) || 'Website enquiry';
     const body = 'Name: ' + value(0) + '\nEmail: ' + value(1) + '\n\n' + value(2);
-    location.href = 'mailto:ae@ms-textile-solution-bangladesh.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    note.textContent = 'Continue in your email app to send your message, or email ae@ms-textile-solution-bangladesh.com directly.';
+    location.href = 'mailto:info@textile-solution-bd.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Continue in your email app to send your message, or email info@textile-solution-bd.com directly.';
    });
   });
   const chat = document.getElementById('ht-ctc-chat');
